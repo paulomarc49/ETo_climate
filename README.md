@@ -102,9 +102,13 @@ Run the Jupyter notebook `ETo_climate_training_prediction_reproducibility.ipynb`
 ## 5. Example Usage of WRF system  
 
 ### 5.1 Acquire Dynamic Data  
-Run the following command in bash:  
+Run the following command in bash:
+```bash
 python getdata_gfs.py 20241126
+```
 
 ### 5.2. Run WRF
-Run the following command in bash:  
+Run the following command in bash:
+```bash
 run_wrf ANDES_03 20241126 &
+```

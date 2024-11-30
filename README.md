@@ -117,14 +117,19 @@ The NumPy files from the years 2021, 2022, and April 2024, stored in Google Driv
 * Visualization operations for the ETo weather clusters were also implemented for daily evaluation.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="350"/>
-  <p><strong>Figure 2:</strong> Visualization of the ETo Penman-Monteith equation variables and calculations.</p>
+  <img src="./ETo_weather_visualization_2.png" alt="Description of the image" width="350"/>
+  <p><strong>Figure 3:</strong> Visualization of the ETo weather clusters in training.</p>
 </div>
 
 ### 5.2 ETo Weather Prediction  
 Run the Jupyter notebook `ETo_weather_prediction_reproducibility.ipynb` to:  
-- Load the trained custom Scikit-learn SOM model and predict clusters for the testing dataset (e.g., two years of testing data were used in this project).  
-- Save the predicted labels for future use in **ETo Climate Clustering**.  
+* Load the trained custom Scikit-learn SOM model and predict clusters for the testing dataset (e.g., two years of testing data were used in this project).  
+* Save the predicted labels for future use in **ETo Climate Clustering**.
+
+<div style="text-align: center;">
+  <img src="./ETo_weather_visualization_3.png" alt="Description of the image" width="350"/>
+  <p><strong>Figure 4:</strong> Visualization of the ETo weather clusters in testing.</p>
+</div>
 
 ---
 

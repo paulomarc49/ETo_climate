@@ -107,7 +107,13 @@ The NumPy files from the years 2021, 2022, and April 2024, stored in Google Driv
  
 * Preliminary hyperparameters were determined through multiple evaluations of a custom SOM model in Scikit-learn, using data from January 2021 for training and April 2024 for validation, with distortion as the scoring metric.
 * Using the initial hyperparameters, the main training operation was performed for the entire years of 2021 and 2022. These operations included data normalization and the storage of both the normalization model and the trained model using the joblib library for use in prediction tasks.
-* Visualization operations for the eight variables in the ETo weather clustering were implemented on an hourly basis, along with ETo generation using the Penman-Monteith equation as an additional informational output.
+* Visualization operations for the eight variables in the ETo weather clustering were implemented on an daily and hourly basis (see figure 2), along with ETo generation using the Penman-Monteith equation as an additional informational output.
+
+<div style="text-align: center;">
+  <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="350"/>
+  <p><strong>Figure 2:</strong> Visualization of ETo Penman-Monteith equation variables and calculations.</p>
+</div>
+  
 * Visualization operations for the ETo weather clusters were also implemented for daily evaluation.
 
 ### 5.2 ETo Weather Prediction  

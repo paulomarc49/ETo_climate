@@ -111,10 +111,15 @@ The NumPy files from the years 2021, 2022, and April 2024, stored in Google Driv
 
 <div style="text-align: center;">
   <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="350"/>
-  <p><strong>Figure 2:</strong> Visualization of ETo Penman-Monteith equation variables and calculations.</p>
+  <p><strong>Figure 2:</strong> Visualization of the ETo Penman-Monteith equation variables and calculations.</p>
 </div>
   
 * Visualization operations for the ETo weather clusters were also implemented for daily evaluation.
+
+<div style="text-align: center;">
+  <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="350"/>
+  <p><strong>Figure 2:</strong> Visualization of the ETo Penman-Monteith equation variables and calculations.</p>
+</div>
 
 ### 5.2 ETo Weather Prediction  
 Run the Jupyter notebook `ETo_weather_prediction_reproducibility.ipynb` to:  

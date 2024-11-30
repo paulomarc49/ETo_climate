@@ -58,7 +58,7 @@ The **WRF** system also have to be configured to processes the following meteoro
 
 ## 3. WORKFLOW  
 
-Once the **WRF** system is instaled and configured for the domain of interest, the block diagram in figure 1 ![Description of the image](./images/example-image.png) shows the flow chart process must folow to achive a ETo climate clustering. 
+Once the **WRF** system is instaled and configured for the domain of interest, the block diagram in figure 1 ![Description of the image](.Block_diagram_Eto_climate.jpg) shows the flow chart process must folow to achive a ETo climate clustering. 
 
 
 

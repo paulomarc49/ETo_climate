@@ -125,10 +125,10 @@ The NumPy files from the years 2021, 2022, and April 2024, stored in Google Driv
 ### 5.2 ETo Weather Prediction  
 The normalization and trained model files are loaded into the Jupyter notebook **ETo_weather_prediction_reproducibility.ipynb**, and the following operations are performed:
 
-Normalization of data from the years 2011, 2018, 2019, and 2020.
-Prediction of ETo weather clusters for the normalized data from the years 2011, 2018, 2019, and 2020.
-Storage of the predicted labels for future use in **ETo Climate Clustering**.
-Visualization of comparative ETo weather clusters between the years 2011, 2018, 2019, and 2020.
+* Normalization of data from the years 2011, 2018, 2019, and 2020.
+* Prediction of ETo weather clusters for the normalized data from the years 2011, 2018, 2019, and 2020.
+* Storage of the predicted labels for future use in **ETo Climate Clustering**.
+* Visualization of comparative ETo weather clusters between the years 2011, 2018, 2019, and 2020.
 
 <div style="text-align: center;">
   <img src="./ETo_weather_visualization_3.png" alt="Description of the image" width="450"/>
@@ -137,10 +137,31 @@ Visualization of comparative ETo weather clusters between the years 2011, 2018, 
 
 ---
 
-## 6. ETo Climate Clustering  
-Run the Jupyter notebook `ETo_climate_training_prediction_reproducibility.ipynb` to:  
-- Load the cluster labels from the **ETo Weather Clustering** step.  
-- Perform hyperparameter selection.  
+## 6. ETo CLIMATE CLUSTER  
+In the Jupyter notebook **ETo_climate_training_prediction_reproducibility.ipynb** the following operations are performed:
+
+### 6.1. ETo Climate training
+
+#### 6.1.1.  Generation of the mesh of pixels coordinates and dates.
+
+
+
+#### 6.1.2.  Concatenation of mesh of pixels coordinates and dates with ETo weather clusters.
+
+Loading the cluster labels from the **ETo Weather Training** and **ETo Weather Prediction** steps.
+
+#### 6.1.3.  Histogram generation.
+#### 6.1.4.  SOM input signal construction.
+#### 6.1.5.  Perform hyperparameter selection.
+#### 6.1.6.  Normalization.
+#### 6.1.7.  Implementation with sci-kit learn SOM.
+#### 6.1.8.  SOM implementation with reproducibility score evaluation.
+#### 6.1.9.  Number of clusters determination.
+#### 6.1.10. Maximum number of iterations determination.
+#### 6.1.11. Learning rate determination
+#### 6.1.12. Evaluation of Trained and Tested Datasets in Terms of Repeatibility.
+
+### 6.2. Evaluation of Trained and Tested Datasets in Terms of Repeatibility
 
 <div style="text-align: center;">
   <img src="./ETo_climate_visualization_1.png" alt="Description of the image" width="900"/>

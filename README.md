@@ -107,27 +107,31 @@ The NumPy files from the years 2021, 2022, and April 2024, stored in Google Driv
  
 * Preliminary hyperparameters were determined through multiple evaluations of a custom SOM model in Scikit-learn, using data from January 2021 for training and April 2024 for validation, with distortion as the scoring metric.
 * Using the initial hyperparameters, the main training operation was performed for the entire years of 2021 and 2022. These operations included data normalization and the storage of both the normalization model and the trained model using the joblib library for use in prediction tasks.
+* Storage of the predicted labels for future use in **ETo Climate Clustering**.
 * Visualization operations for the eight variables in the ETo weather clustering were implemented on an daily and hourly basis (see figure 2), along with ETo generation using the Penman-Monteith equation as an additional informational output.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="350"/>
+  <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="300"/>
   <p><strong>Figure 2:</strong> Visualization of the ETo Penman-Monteith equation variables and calculations.</p>
 </div>
   
 * Visualization operations for the ETo weather clusters were also implemented for daily evaluation.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_2.png" alt="Description of the image" width="350"/>
+  <img src="./ETo_weather_visualization_2.png" alt="Description of the image" width="300"/>
   <p><strong>Figure 3:</strong> Visualization of the ETo weather clusters in training.</p>
 </div>
 
 ### 5.2 ETo Weather Prediction  
-Run the Jupyter notebook `ETo_weather_prediction_reproducibility.ipynb` to:  
-* Load the trained custom Scikit-learn SOM model and predict clusters for the testing dataset (e.g., two years of testing data were used in this project).  
-* Save the predicted labels for future use in **ETo Climate Clustering**.
+The normalization and trained model files are loaded into the Jupyter notebook **ETo_weather_prediction_reproducibility.ipynb**, and the following operations are performed:
+
+Normalization of data from the years 2011, 2018, 2019, and 2020.
+Prediction of ETo weather clusters for the normalized data from the years 2011, 2018, 2019, and 2020.
+Storage of the predicted labels for future use in **ETo Climate Clustering**.
+Visualization of comparative ETo weather clusters between the years 2011, 2018, 2019, and 2020.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_3.png" alt="Description of the image" width="350"/>
+  <img src="./ETo_weather_visualization_3.png" alt="Description of the image" width="450"/>
   <p><strong>Figure 4:</strong> Visualization of the ETo weather clusters in testing.</p>
 </div>
 

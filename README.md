@@ -1,14 +1,21 @@
 # ETo Climate Clustering  
 
-## 1. WRF Model Configuration and Data Processing Workflow  
+## 1. GENERAL REQUIREMENTS
 
-The **WRF** system must be downloaded and installed on a Linux distribution. For this project, **Linux Mint MATE** was chosen as the operating system. This repository provides detailed instructions for configuring and processing data using the Weather Research and Forecasting (**WRF**) model. The workflow is designed for a specific geographical domain, enabling the processing of meteorological variables and the generation of outputs for advanced analysis.  
+* Linux operating system.
+* WRF system.
+* HPC (optional).
+* Python.
+* Google Colab TPU.
+* Google Colab High RAM CPU.
 
----
+## 2. WRF 
 
-### 1.1 Requirements  
+The **WRF** system must be downloaded and installed on a Linux distribution in a local machine or an HPC. For this project, **Linux Mint MATE** was chosen as the operating system in te local machine and **Ubuntu Server** for the HPC. This repository provides detailed instructions for configuring and processing data using the Weather Research and Forecasting (**WRF**) model. The workflow is designed for a specific geographical domain, enabling the processing of meteorological variables and the generation of outputs for advanced analysis. Executing this study for other domains requires prior modification and configuration of the code provided in this repository.
 
-#### 1.1.1 Prerequisites  
+Disclaimer: The configuration and code in this repository are intended for research purposes only. Users are responsible for adapting the workflow to their specific needs and ensuring compliance with applicable regulations and licensing agreements for the software and data used.
+
+### 2.1. WRF system prerequisites  
 Ensure the following libraries and packages are installed on your operating system:  
 
 - `csh`  
@@ -25,8 +32,8 @@ Ensure the following libraries and packages are installed on your operating syst
 - `netcdf-f`  
 - `pnetcdf`  
 
-#### 1.1.2 Install and Configure WRF  
-The **WRF** software must be installed and configured using the "namelist" file located in the WPS directory to align with the designated domain specifications. For this study, which focuses on the Ecuadorian Andes and Amazon region, the following specifications apply:  
+### 2.2. WRF Domain 
+The **WRF** system must be installed and configured using the "namelist" file located in the WPS directory to define a specific area of interest. For this study, which focuses on the Ecuadorian Andes and Amazon region, the following specifications apply:
 
 - **Projection**: Mercator  
 - **Initial Latitude**: 0.600000  
@@ -37,10 +44,8 @@ The **WRF** software must be installed and configured using the "namelist" file 
 - **Final Longitude**: -73.916667  
 - **Final Coordinates**: 4°28’00.0"S, 73°55’00.0"W  
 
----
-
-### 1.2 Variables of Interest  
-The workflow processes the following meteorological variables in the specified order:  
+### 2.3. WRF Variables of Interest  
+The **WRF** system also have to be configured to processes the following meteorological variables in the specified order:  
 
 1. **Rn**: Net Radiation  
 2. **G**: Ground Heat Flux  
@@ -51,9 +56,11 @@ The workflow processes the following meteorological variables in the specified o
 7. **ea**: Actual Vapor Pressure  
 8. **u2**: Wind Speed  
 
----
+## 3. WORKFLOW  
 
-### 1.3 Workflow  
+Once the **WRF** system is instaled and configured for the domain of interest, the block diagram in figure 1 ![Description of the image](./images/example-image.png) shows the flow chart process must folow to achive a ETo climate clustering. 
+
+
 
 #### 1.3.1 Step 1: Download and Process GFS Data  
 Run the Python script `getdata_gfs.py` to download and prepare GFS (Global Forecast System) data required for running WRF.  

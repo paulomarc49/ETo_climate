@@ -142,6 +142,11 @@ Run the Jupyter notebook `ETo_climate_training_prediction_reproducibility.ipynb`
 - Load the cluster labels from the **ETo Weather Clustering** step.  
 - Perform hyperparameter selection.  
 
+<div style="text-align: center;">
+  <img src="./ETo_climate_visualization_1.png" alt="Description of the image" width="900"/>
+  <p><strong>Figure 4:</strong> Visualization of the ETo climate clusters in training and testing with pixel difference.</p>
+</div>
+
 ---
 
 ## 7. Example Usage of WRF system  

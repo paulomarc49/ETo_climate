@@ -151,8 +151,30 @@ In the Jupyter notebook **ETo_climate_training_prediction_reproducibility.ipynb*
 Loading the cluster labels from the **ETo Weather Training** and **ETo Weather Prediction** steps.
 
 #### 6.1.3.  Histogram generation.
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_histogram_train.png" alt="Description of the image" width="900"/>
+  <p><strong>Figure :</strong> .</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="900"/>
+  <p><strong>Figure :</strong> .</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_histogram_test.png" alt="Description of the image" width="900"/>
+  <p><strong>Figure :</strong> .</p>
+</div>
+
 #### 6.1.4.  SOM input signal construction.
+
+
+
 #### 6.1.5.  Perform hyperparameter selection.
+
+
+
 #### 6.1.6.  Normalization.
 #### 6.1.7.  Implementation with sci-kit learn SOM.
 #### 6.1.8.  SOM implementation with reproducibility score evaluation.

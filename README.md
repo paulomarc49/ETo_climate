@@ -181,7 +181,7 @@ Generation of validation dataset for SOM input signal construction:
 
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure :</strong> .</p>
+  <p><strong>Figure 7:</strong> .</p>
 </div>
 
 Generation of test dataset for SOM input signal construction:
@@ -191,8 +191,10 @@ Generation of test dataset for SOM input signal construction:
 
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_histogram_test.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure :</strong> .</p>
+  <p><strong>Figure 8:</strong> .</p>
 </div>
+
+Finally, in this section, a histogram of the occurrence of each cluster per pixel coordinate across the entire study period is calculated for each portion of the dataset. Grouping and pivoting operations are used to achieve the histogram.
 
 #### 6.1.4.  SOM input signal construction.
 

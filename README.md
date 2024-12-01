@@ -182,35 +182,35 @@ Generation of test dataset for SOM input signal construction:
 Finally, in this section, a histogram of the occurrence of each cluster per pixel coordinate across the entire study period is calculated for each portion of the dataset. Grouping and pivoting operations are used to achieve the histogram.
 
 #### 6.1.4.  SOM input signal construction.
-
+The construction of the input signal for training the SOM, for this study, has the following structure: pixel_Y, pixel_X, cluster 0, ..., cluster 35:
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_histogram_train.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure 6:</strong> .</p>
+  <p><strong>Figure 6:</strong> ETo climate input signal for training.</p>
 </div>
 
+The input signal for validating the SOM:
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure 7:</strong> .</p>
+  <p><strong>Figure 7:</strong> ETo climate input signal for validation.</p>
 </div>
 
+The input signal for testing the SOM:
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_histogram_test.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure 8:</strong> .</p>
+  <p><strong>Figure 8:</strong> ETo climate input signal for testing.</p>
 </div>
 
+#### 6.1.5.  Normalization.
+The dataset was split into three portions due to the maximum values in the histogram. If the split proportion is not maintained, the portion of the dataset with more records will determine the maximum value, affecting the normalization of portions with fewer records. Normalization was performed using the MinMaxScaler tool from the **Scikit-learn** library.
 
+#### 6.1.6.  Implementation with sci-kit learn SOM.
+The package chosen for implementing the SOM in the ETo climate clustering operations was **Scikit-learn SOM**. Additionally, the **Scikit-learn Custom SOM**, previously used for ETo weather cluster determination, can also be utilized; however, the distortion score metric was not evaluated.
 
-#### 6.1.5.  Perform hyperparameter selection.
-
-
-
-#### 6.1.6.  Normalization.
-#### 6.1.7.  Implementation with sci-kit learn SOM.
-#### 6.1.8.  SOM implementation with reproducibility score evaluation.
-#### 6.1.9.  Number of clusters determination.
-#### 6.1.10. Maximum number of iterations determination.
-#### 6.1.11. Learning rate determination
-#### 6.1.12. Evaluation of Trained and Tested Datasets in Terms of Repeatibility.
+#### 6.1.7.  SOM implementation with reproducibility score evaluation.
+#### 6.1.8.  Number of clusters determination.
+#### 6.1.9.  Maximum number of iterations determination.
+#### 6.1.10. Learning rate determination
+#### 6.1.11. Evaluation of Trained and Tested Datasets in Terms of Repeatibility.
 
 ### 6.2. Evaluation of Trained and Tested Datasets in Terms of Repeatibility
 

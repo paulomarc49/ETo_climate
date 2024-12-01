@@ -131,7 +131,7 @@ The normalization and trained model files are loaded into the Jupyter notebook *
 * Visualization of comparative ETo weather clusters between the years 2011, 2018, 2019, and 2020.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_3.png" alt="Description of the image" width="450"/>
+  <img src="./Images/ETo_weather_visualization_3.png" alt="Description of the image" width="450"/>
   <p><strong>Figure 4:</strong> Visualization of the ETo weather clusters in testing.</p>
 </div>
 
@@ -222,7 +222,7 @@ Executing this study for other hyperparameters requires prior modification and c
 ### 6.2. Evaluation of Trained and Tested Datasets in Terms of Repeatibility
 
 <div style="text-align: center;">
-  <img src="./ETo_climate_visualization_1.png" alt="Description of the image" width="900"/>
+  <img src="./Images/ETo_climate_visualization_1.png" alt="Description of the image" width="900"/>
   <p><strong>Figure 4:</strong> Visualization of the ETo climate clusters in training and testing with pixel difference.</p>
 </div>
 

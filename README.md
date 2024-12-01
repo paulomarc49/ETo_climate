@@ -138,19 +138,31 @@ The normalization and trained model files are loaded into the Jupyter notebook *
 ---
 
 ## 6. ETo CLIMATE CLUSTER  
-In the Jupyter notebook **ETo_climate_training_prediction_reproducibility.ipynb** the following operations are performed:
+The ETo climate clustering is performed in a high RAM CPU by executing the Jupyter notebook named **ETo_climate_training_prediction_reproducibility.ipynb**, where the following operations are carried out:
 
 ### 6.1. ETo Climate training
 
 #### 6.1.1.  Generation of the mesh of pixels coordinates and dates.
+This section of the script creates a mesh with every combination of pixels in the "Y" coordinate, the "X" coordinate, the month, and the day. The lenght per year is calculated as follows: 171 possible coordinates in "Y", 171 possible coordinates in "X", and 365 days. For example, the calculation for the year 2017 is: 171 * 171 * 365 = 10 672 965.
 
-
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_visualization_date_mesh.png" alt="Description of the image" width="200"/>
+  <p><strong>Figure 5:</strong> Mesh of pixels coordinates and dates example for year 2017.</p>
+</div>
 
 #### 6.1.2.  Concatenation of mesh of pixels coordinates and dates with ETo weather clusters.
+This section of the script loads the cluster labels from the **ETo Weather Training** and **ETo Weather Prediction** steps. For this study, the labels are stored in Google Drive, with the links provided. Executing this study for other ETo weather clustering data requires prior modification and configuration of the code in this repository.
 
-Loading the cluster labels from the **ETo Weather Training** and **ETo Weather Prediction** steps.
+* file_id_2017      = '1dflY1oOVLRyZYzKpYGmcuxLYNU9x_K_z'
+* file_id_2018      = '1-4s8M1K0thJ8RGxrIGkQNR5om_5r05Je'
+* file_id_2019      = '1-8qn_5E_C5Q90zUEZKJvG7A559_o8lrF'
+* file_id_2020      = '1-BLtquk0_RTJCNy8WzoViUFF23-J6gdx'
+* file_id_2021_2022 = '1-5xq2TbtCqURWI6kMgAuJJTB1gdZlSW7'
+
+The mesh of pixel coordinates and dates, along with the labels loaded per year, are then concatenated horizontally and stored on the CPU disk. 
 
 #### 6.1.3.  Histogram generation.
+This section splits the total data set in train (for this study years 2017 and 2019), validation (for this study years 2018 and 2020) and test (for this study years 2021 and 2022). Then concatenates each portion of the dataset vertically like follows:  
 
 Generation of train dataset for SOM input signal construction:
 * Year 2017: 171 pixels in y * 171 pixels in x * 365 days = 10 672 965 registers
@@ -158,8 +170,8 @@ Generation of train dataset for SOM input signal construction:
 * Total:     171 pixels in y * 171 pixels in x * 730 days = 21 345 930 registers
 
 <div style="text-align: center;">
-  <img src="./Images/ETo_climate_histogram_train.png" alt="Description of the image" width="900"/>
-  <p><strong>Figure :</strong> .</p>
+  <img src="./Images/ETo_climate_histogram_train.png" alt="Description of the image" width="600"/>
+  <p><strong>Figure 6:</strong> .</p>
 </div>
 
 Generation of validation dataset for SOM input signal construction:
@@ -168,7 +180,7 @@ Generation of validation dataset for SOM input signal construction:
 * Total:     171 pixels in y * 171 pixels in x * 731 days = 21 375 171 registers
 
 <div style="text-align: center;">
-  <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="900"/>
+  <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="600"/>
   <p><strong>Figure :</strong> .</p>
 </div>
 
@@ -178,7 +190,7 @@ Generation of test dataset for SOM input signal construction:
 * Total:     171 pixels in y * 171 pixels in x * 730 days = 21 345 930 registers
 
 <div style="text-align: center;">
-  <img src="./Images/ETo_climate_histogram_test.png" alt="Description of the image" width="900"/>
+  <img src="./Images/ETo_climate_histogram_test.png" alt="Description of the image" width="600"/>
   <p><strong>Figure :</strong> .</p>
 </div>
 

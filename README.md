@@ -68,7 +68,7 @@ The WRF system also have to be configured to processes the following meteorologi
 Once the WRF system is installed and configured for the domain of interest, the block diagram in Figure 1 illustrates the implementaation flow that must be followed to achieve ETo climate clustering.
 
 <div style="text-align: center;">
-  <img src="./Block_diagram_ETo_climate.jpg" alt="Description of the image" width="350"/>
+  <img src="./Images/Block_diagram_ETo_climate.jpg" alt="Description of the image" width="350"/>
   <p><strong>Figure 1:</strong> Block diagram of project implementation.</p>
 </div>
 
@@ -111,14 +111,14 @@ The NumPy files from the years 2021, 2022, and April 2024, stored in Google Driv
 * Visualization operations for the eight variables in the ETo weather clustering were implemented on an daily and hourly basis (see figure 2), along with ETo generation using the Penman-Monteith equation as an additional informational output.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_1.png" alt="Description of the image" width="300"/>
+  <img src="./Images/ETo_weather_visualization_1.png" alt="Description of the image" width="300"/>
   <p><strong>Figure 2:</strong> Visualization of the ETo Penman-Monteith equation variables and calculations.</p>
 </div>
   
 * Visualization operations for the ETo weather clusters were also implemented for daily evaluation.
 
 <div style="text-align: center;">
-  <img src="./ETo_weather_visualization_2.png" alt="Description of the image" width="300"/>
+  <img src="./Images/ETo_weather_visualization_2.png" alt="Description of the image" width="300"/>
   <p><strong>Figure 3:</strong> Visualization of the ETo weather clusters in training.</p>
 </div>
 

@@ -105,6 +105,7 @@ Use the Python script collect_data.py to convert WRF output from NetCDF to NumPy
 ### 5.1 ETo Weather Training  
 The NumPy files from the years 2021, 2022, and April 2024, stored in Google Drive, are loaded into the Jupyter notebook **ETo_weather_training_reproducibility.ipynb**, and the following operations are performed:
  
+* Implementation of the **Scikit-learn Custom SOM** model using distortion as the score metric for cluster quality evaluation.
 * Preliminary hyperparameters were determined through multiple evaluations of a custom SOM model in Scikit-learn, using data from January 2021 for training and April 2024 for validation, with distortion as the scoring metric.
 * Using the initial hyperparameters, the main training operation was performed for the entire years of 2021 and 2022. These operations included data normalization and the storage of both the normalization model and the trained model using the joblib library for use in prediction tasks.
 * Storage of the predicted labels for future use in **ETo Climate Clustering**.
@@ -212,18 +213,36 @@ The package chosen for implementing the SOM in the ETo climate clustering operat
 Instead of the distortion score metric, repeatability was implemented. It is calculated as the percentage of differing pixels resulting from the evaluation of a pair of models with the exact same hyperparameters but different initializations, referred to as the random state in **Scikit-learn SOM**.
 
 #### 6.1.8.  Hyperparameters determination
-Hyperpameters determination was performed with the train and validation dataset thought multiple executions of pair of models and repeatibility evaluation. The hyperparameters determinated were:
+Hyperparameter determination was performed using the training and validation datasets through multiple executions of paired models and repeatability evaluations. The determined hyperparameters were:
 
-* Number of clusters determination.
-* Maximum number of iterations determination.
-* Learning rate determination.
+* Number of clusters.
 
-Executing this study for other hyperparameters requires prior modification and configuration of the code in this repository.
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_k_selection.png" alt="Description of the image" width="500"/>
+  <p><strong>Figure 9:</strong> Determination of the optimal number of clusters for ETo climate model.</p>
+</div>
+  
+* Maximum number of iterations.
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_max_iter_selection.png" alt="Description of the image" width="500"/>
+  <p><strong>Figure 10:</strong> Determination of the maximum number of iterations for ETo climate model.</p>
+</div>
+
+* Learning rate.
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_lr_selection.png" alt="Description of the image" width="500"/>
+  <p><strong>Figure 11:</strong> Determination of the optimal learning rate for ETo climate model.</p>
+</div>
+
+Executing this study for other hyperparameters values requires prior modification and configuration of the code in this repository.
 ### 6.2. Evaluation of Trained and Tested Datasets in Terms of Repeatibility
+The quality evaluation of the ETo climate clusters was performed by fitting the model with the training dataset, predicting a pair of models using the validation dataset with random state A versus random state B, and comparing the percentage difference in pixels with another pair of models predicted using the test dataset with the same random states A and B.
 
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_visualization_1.png" alt="Description of the image" width="900"/>
-  <p><strong>Figure 4:</strong> Visualization of the ETo climate clusters in training and testing with pixel difference.</p>
+  <p><strong>Figure 12:</strong> Visualization of the ETo climate clusters in training and testing with pixel difference.</p>
 </div>
 
 ---

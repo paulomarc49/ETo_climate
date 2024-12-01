@@ -200,6 +200,8 @@ The input signal for testing the SOM:
   <p><strong>Figure 8:</strong> ETo climate input signal for testing.</p>
 </div>
 
+Executing this study for other ETo weather cluaters labels numer requires prior modification and configuration of the code in this repository.
+
 #### 6.1.5.  Normalization.
 The dataset was split into three portions due to the maximum values in the histogram. If the split proportion is not maintained, the portion of the dataset with more records will determine the maximum value, affecting the normalization of portions with fewer records. Normalization was performed using the MinMaxScaler tool from the **Scikit-learn** library.
 
@@ -207,11 +209,16 @@ The dataset was split into three portions due to the maximum values in the histo
 The package chosen for implementing the SOM in the ETo climate clustering operations was **Scikit-learn SOM**. Additionally, the **Scikit-learn Custom SOM**, previously used for ETo weather cluster determination, can also be utilized; however, the distortion score metric was not evaluated.
 
 #### 6.1.7.  SOM implementation with reproducibility score evaluation.
-#### 6.1.8.  Number of clusters determination.
-#### 6.1.9.  Maximum number of iterations determination.
-#### 6.1.10. Learning rate determination
-#### 6.1.11. Evaluation of Trained and Tested Datasets in Terms of Repeatibility.
+Instead of the distortion score metric, repeatability was implemented. It is calculated as the percentage of differing pixels resulting from the evaluation of a pair of models with the exact same hyperparameters but different initializations, referred to as the random state in **Scikit-learn SOM**.
 
+#### 6.1.8.  Hyperparameters determination
+Hyperpameters determination was performed with the train and validation dataset thought multiple executions of pair of models and repeatibility evaluation. The hyperparameters determinated were:
+
+* Number of clusters determination.
+* Maximum number of iterations determination.
+* Learning rate determination.
+
+Executing this study for other hyperparameters requires prior modification and configuration of the code in this repository.
 ### 6.2. Evaluation of Trained and Tested Datasets in Terms of Repeatibility
 
 <div style="text-align: center;">

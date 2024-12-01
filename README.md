@@ -169,34 +169,34 @@ Generation of train dataset for SOM input signal construction:
 * Year 2019: 171 pixels in y * 171 pixels in x * 365 days = 10 672 965 registers
 * Total:     171 pixels in y * 171 pixels in x * 730 days = 21 345 930 registers
 
-<div style="text-align: center;">
-  <img src="./Images/ETo_climate_histogram_train.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure 6:</strong> .</p>
-</div>
-
 Generation of validation dataset for SOM input signal construction:
 * Year 2018: 171 pixels in y * 171 pixels in x * 365 days = 10 672 965 registers
 * Year 2020: 171 pixels in y * 171 pixels in x * 366 days = 10 702 206 registers
 * Total:     171 pixels in y * 171 pixels in x * 731 days = 21 375 171 registers
-
-<div style="text-align: center;">
-  <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="600"/>
-  <p><strong>Figure 7:</strong> .</p>
-</div>
 
 Generation of test dataset for SOM input signal construction:
 * Year 2021: 171 pixels in y * 171 pixels in x * 365 days = 10 672 965 registers
 * Year 2022: 171 pixels in y * 171 pixels in x * 365 days = 10 672 965 registers
 * Total:     171 pixels in y * 171 pixels in x * 730 days = 21 345 930 registers
 
+Finally, in this section, a histogram of the occurrence of each cluster per pixel coordinate across the entire study period is calculated for each portion of the dataset. Grouping and pivoting operations are used to achieve the histogram.
+
+#### 6.1.4.  SOM input signal construction.
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_histogram_train.png" alt="Description of the image" width="600"/>
+  <p><strong>Figure 6:</strong> .</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="./Images/ETo_climate_histogram_validation.png" alt="Description of the image" width="600"/>
+  <p><strong>Figure 7:</strong> .</p>
+</div>
+
 <div style="text-align: center;">
   <img src="./Images/ETo_climate_histogram_test.png" alt="Description of the image" width="600"/>
   <p><strong>Figure 8:</strong> .</p>
 </div>
-
-Finally, in this section, a histogram of the occurrence of each cluster per pixel coordinate across the entire study period is calculated for each portion of the dataset. Grouping and pivoting operations are used to achieve the histogram.
-
-#### 6.1.4.  SOM input signal construction.
 
 
 
